@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Lesson16</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="form-container">
+            <form id="form" action="#">
+                <h3>Додати слайд</h3>
+                <div class="">
+                    <label class="task-title">Заголовок</label>
+                    <input type="text" id="title" name="title" class="task-input">
+                </div>
+                <p class="error error-input"></p>
+                <div class="">
+                    <label class="task-title">Детальний опис</label>
+                    <textarea name="todo" id="todo" class="task-input task-textarea"></textarea>
+                </div>
+                <p class="error error-input"></p>
+                <div class="form-item-block">
+                    <p>Додати в кінець</p>
+                    <button type="button" id="button-add" class="button">Додати</button>
+                </div>
+                <div class="form-item-block">
+                    <label>Додати за номером:</label>
+                    <input id="input-add-number" type="number" class="input-number">
+                    <button type="button" id="button-add-number" class="button">Додати</button>
+                </div>
+                <p id="error-add-number" class="error"></p>
+                <h3>Видалити слайд</h3>
+                <div class="form-item-block">
+                    <p>Останній слайд</p>
+                    <button type="button" id="button-delete-last" class="button">Видалити</button>
+                </div>
+                <div class="form-item-block">
+                    <label>Слайд за номером:</label>
+                    <input id="input-number-delete" type="number" class="input-number">
+                    <button type="button" id="button-delete-namber" class="button">Видалити</button>
+                </div>
+                <p id="error-delete-number" class="error"></p>
+                <h3>Відкривання слайдів</h3>
+                <div class="form-item-block">
+                    <p>Перший слайд</p>
+                    <button id="button-open-first" class="button">Відкрити</button>
+                </div>
+                <div class="form-item-block">
+                    <p>Останній слайд</p>
+                    <button id="button-open-last" class="button">Відкрити</button>
+                </div>
+                <div class="form-item-block">
+                    <label>Слайд за номером:</label>
+                    <input type="number" id="input-number-open" class="input-number">
+                    <button type="button" id="button-open-number" class="button">Відкрити</button>
+                </div>
+                <p id="error-input-number-open" class="error"></p>
+            </form>
+        </div>
+        <div class="slide">
+            <div class="slide-top">
+                <div>
+                    <i id="button-back" class="fa-sharp fa-solid fa-arrow-left-long arrow"></i>
+                </div>
+                <div class="slide-window">
+                    <div id="slide-conteiner" class="slide-conteiner">
+                        <div class="slide-block">
+                            <h2>
+                                Слайд №1
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque rerum, tenetur iure sapiente quidem atque blanditiis provident quasi odio, quia, voluptatem necessitatibus similique soluta nam illum aut dolorem eveniet unde asperiores! Iure impedit velit ab voluptates, architecto aliquid? Facere odio possimus officia sunt vitae, consequuntur cumque dicta ipsam iusto atque.
+                            </p>
+                        </div>
+                        <div class="slide-block">
+                            <h2>
+                                Слайд №2
+                            </h2>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id quibusdam minima repudiandae, enim at quos perspiciatis nulla fugiat omnis vel, blanditiis iusto consequatur deserunt! Quas natus reiciendis, aspernatur, nulla repellendus fugiat repellat unde doloribus ex deserunt architecto earum! Corrupti numquam harum esse nisi ad perspiciatis eligendi sit. Rem praesentium temporibus odio quaerat dicta aliquid sit, hic accusamus ratione dolorem tempora eum possimus, odit quo consequuntur laboriosam natus quas perferendis id?
+                            </p>
+                        </div>
+                        <div class="slide-block">
+                            <h2>
+                                Слайд №3
+                            </h2>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad obcaecati autem quisquam corporis laboriosam nisi? Quis quos labore laborum laboriosam neque unde dicta obcaecati suscipit facere aliquid, nesciunt magnam omnis ea iste officia aut in error earum nulla aliquam et. Soluta accusamus iste itaque autem veritatis nesciunt facere error dicta! Veritatis, ratione delectus? Fugit nostrum quam fugiat mollitia tempore nobis unde a obcaecati earum quos vel cupiditate asperiores laboriosam harum minima corporis, adipisci nisi vero odio doloremque vitae debitis quidem? Cum ullam maiores magni architecto fuga reprehenderit, illum deleniti, exercitationem, ipsam porro nobis dolorem. Aperiam asperiores recusandae sed doloremque eum.
+                            </p>
+                        </div>
+                        <div class="non-slide">
+                            <h2>Додайте свій перший слайд</h2>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <i id="button-next" class="fa-sharp fa-solid fa-arrow-right-long arrow"></i>
+                </div>
+            </div>
+            <div class="slide-bottom">
+                <div class="slide-pages">
+                    <p>Ви переглядаєте слайд №</p>
+                    <p id="slide-number-open" class="slide-number">1</p>
+                </div>
+                <div class="slide-pages">
+                    <p>Кількість слайдів</p>
+                    <p id="slide-number" class="slide-number">3</p>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    
+    <script src="https://kit.fontawesome.com/b478714518.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

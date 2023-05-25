@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+div,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+
+.wrapper {
+    max-width: 1320px;
+    margin: 0 auto;
+    background-color: rgb(228, 214, 196);
+    display: grid;
+    grid-template-columns: 350px 1fr;
+}
+
+.form-container {
+    padding: 5px;
+}
+
+.task-title {
+    display: block;
+}
+
+.task-input {
+    width: 100%;
+    height: 25px;
+    padding-left: 5px;
+}
+
+.task-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+.input-number {
+    width: 50px;
+}
+
+.form-item-block {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button {
+    width: 90px;
+    height: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 16px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: brown;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+}
+
+.button:hover {
+    background-color: rgb(241, 15, 15);
+}
+
+.button:active {
+    top: 3px;
+}
+
+.arrow {
+    font-size: 48px;
+    color: brown;
+}
+
+.arrow:hover {
+    color: rgb(241, 15, 15);
+}
+
+.slide {
+    border: 2px solid black;
+}
+
+.slide-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.slide-window {
+    width: 600px;
+    height: 300px;
+    border: 2px solid rgb(19, 221, 120);
+    background-color: aqua;
+    overflow: hidden;
+}
+
+.slide-conteiner {
+    height: 100%;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all 1s ease;
+}
+
+.slide-block {
+    width: 600px;
+    height: 300px;
+    padding: 10px;
+    flex-shrink: 0;
+    position: relative;
+    transition: all 1s ease;
+}
+
+.non-slide {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.slide-block.active {
+    display: none;
+}
+
+.error {
+    height: 14px;
+    color: red;
+    font-size: 12px;
+}
+
+.slide-bottom {
+    padding-top: 50px;
+    text-align: center;
+    display: grid;
+    grid-row-gap: 30px;
+}
+
+.slide-pages {
+    display: flex;
+    justify-content: center;
+
+}
+
+.slide-number {
+    width: 30px;
+    height: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 1px;
+    margin-left: 10px;
+}
